@@ -22,12 +22,17 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [comSelect, setComSelect] = useState(null);
-  const [result, setResult] = useState("");
+  const [userResult, setUserResult] = useState("");
+  const [comResult, setComResult] = useState("");
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
     let comChoice = randomChoice();
     setComSelect(comChoice);
-    setResult(judgement(choice[userChoice], comChoice)); //userSelect로 변경해보기
+    let userJudge = judgement(choice[userChoice], comChoice);
+    setUserResult(userJudge);
+    setComResult(
+      userJudge === "Tie" ? "Tie" : userJudge === "Win" ? "Lose" : "Win"
+    );
   };
 
   const randomChoice = () => {
@@ -39,7 +44,7 @@ function App() {
 
   const judgement = (user, com) => {
     if (user.name === com.name) {
-      return "tie";
+      return "Tie";
     } else if (user.name === "Rock") {
       return com.name === "Paper" ? "Lose" : "Win";
     } else if (user.name === "Scissor") {
@@ -51,14 +56,21 @@ function App() {
 
   return (
     <div>
+      <h2 className="text">가위 바위 보 게임을 해보자!</h2>
       <div className="main">
-        <Box name="You" item={userSelect} result={result} />
-        <Box name="Computer" item={comSelect} result={result} />
+        <Box name="You" item={userSelect} result={userResult} />
+        <Box name="Computer" item={comSelect} result={comResult} />
       </div>
       <div className="main">
-        <button onClick={() => play("scissor")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
+        <button className="button" onClick={() => play("scissor")}>
+          가위
+        </button>
+        <button className="button" onClick={() => play("rock")}>
+          바위
+        </button>
+        <button className="button" onClick={() => play("paper")}>
+          보
+        </button>
       </div>
     </div>
   );

@@ -1,6 +1,31 @@
 .box {
-  border: 1px solid black;
+  border: 5px solid black;
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.box-win {
+  border: 5px solid green;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.box-lose {
+  border: 5px solid red;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
 }
 
 .item-img {
@@ -10,4 +35,21 @@
 .main {
   display: flex;
   justify-content: center;
+  margin: 20px 0;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkgrey;
 }
