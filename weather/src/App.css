@@ -1,10 +1,3 @@
-body {
-  background: url(https://media.istockphoto.com/id/1403089847/ko/%EB%B2%A1%ED%84%B0/%EC%B5%9C%EC%86%8C%ED%95%9C%EC%9D%98-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A1%9C-%ED%95%80-%EC%9C%84%EC%B9%98%EC%99%80-%EA%B5%AC%EB%A6%84%EC%9D%B4%EC%9E%88%EB%8A%94-%EB%A7%8C%ED%99%94-3d-%ED%96%89%EC%84%B1-%EC%A7%80%EA%B5%AC-%EB%B2%A1%ED%84%B0-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8-%EB%A0%88%EC%9D%B4-%EC%85%98.jpg?s=612x612&w=0&k=20&c=gbnAW4YtlDwDmAuwkFsXQ2KytvMTvbHr4inmZXve3J4=);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .weather {
   display: flex;
   justify-content: center;
@@ -14,8 +7,17 @@ body {
 }
 
 .weather-box {
-  border: 2px solid white;
   padding: 50px;
   border-radius: 20px;
-  background-color: beige;
+  text-align: center;
+}
+
+.cloudy {
+  width: 60px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }

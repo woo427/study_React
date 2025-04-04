@@ -47,7 +47,10 @@ function App() {
 
   return (
     <div>
-      <div className="weather">
+      <div
+        className="weather"
+        style={{ backgroundColor: "#b7eaea", height: "100vh" }}
+      >
         <WeatherBox weather={weather} />
         <WeatherButton cities={cities} setCity={setCity} />
       </div>
