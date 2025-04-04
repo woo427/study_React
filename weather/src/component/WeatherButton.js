@@ -5,9 +5,15 @@ import { Button } from "react-bootstrap";
 const WeatherButton = ({ cities, setCity }) => {
   return (
     <div>
-      <Button variant="dark">현재 위치</Button>
+      <Button style={{ margin: 2 }} variant="dark">
+        현재 위치
+      </Button>
       {cities.map((city) => (
-        <Button onClick={() => setCity(city)} variant="dark">
+        <Button
+          style={{ margin: 2 }}
+          onClick={() => setCity(city)}
+          variant="dark"
+        >
           {city}
         </Button>
       ))}
