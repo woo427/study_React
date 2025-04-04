@@ -10,8 +10,8 @@ const WeatherBox = ({ weather }) => {
         <h5>{weather?.name}의 날씨 정보입니다.</h5>
       </div>
 
-      <h3>섭씨온도 : {weather?.main.temp}°C</h3>
-      <h3>화씨온도 : {temp_f}°F</h3>
+      <h3>섭씨온도 : {weather?.main.temp.toFixed(2)}°C</h3>
+      <h3>화씨온도 : {temp_f.toFixed(2)}°F</h3>
       <h3>{weather?.weather[0].description}</h3>
     </div>
   );
