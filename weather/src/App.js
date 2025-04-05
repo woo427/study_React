@@ -11,6 +11,7 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
+  const [selectedCity, setSelectedCity] = useState(null);
   const cities = ["paris", "new york", "tokyo", "seoul"];
 
   const getCurrentLocation = () => {
@@ -60,7 +61,13 @@ function App() {
       ) : (
         <div className="weather">
           <WeatherBox weather={weather} />
-          <WeatherButton cities={cities} setCity={setCity} />
+          <WeatherButton
+            cities={cities}
+            setCity={setCity}
+            getCurrentLocation={getCurrentLocation}
+            setSelectedCity={setSelectedCity}
+            selectedCity={selectedCity}
+          />
         </div>
       )}
     </div>
