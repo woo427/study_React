@@ -23,3 +23,9 @@
   display: flex;
   justify-content: center;
 }
+
+.product-img {
+  height: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
